@@ -100,22 +100,22 @@ public class Test {
             e.printStackTrace();
         }
         for (int i = 0; i < list.size(); i++) {
-            charArray = list.get(i).toCharArray();
+            charArray = list.get(i).toCharArray(); //в масив чар добавляем строки по одной
             for (int j = 0; j < charArray.length; j++) {
                 for (int k = 0; k < numbers.length; k++) {
-                    if (charArray[j] == numbers[k]) {
-                        temp = temp + numbers[k];
-                    } else if (charArray[j] == ' ') {
-                        if (!temp.equals("") && !temp.equals(" ")) {
-                            tempList.add(temp);
-                            temp = "";
+                    if (charArray[j] == numbers[k]) { // сравниваем символ из массива чар с массивом намберс
+                        temp = temp + numbers[k]; // если символы равны то добавляем в стрингу темп
+                    } else if (charArray[j] == ' ') { // если символ чар равен ' '
+                        if (!temp.equals("") && !temp.equals(" ")) { // и если строка немп не равна "" или " "
+                            tempList.add(temp); // то добавляем это строку в новый лист
+                            temp = ""; // здесь обнуляем строку
                         }
                     }
                 }
             }
         }
 
-        for (int i = 0; i < tempList.size(); i++) {
+        for (int i = 0; i < tempList.size(); i++) { // здесь выводим содержимое нового листа
             System.out.println(tempList.get(i));
         }
     }
