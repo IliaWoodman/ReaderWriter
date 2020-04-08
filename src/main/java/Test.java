@@ -105,7 +105,7 @@ public class Test {
                 for (int k = 0; k < numbers.length; k++) {
                     if (charArray[j] == numbers[k]) {
                         temp = temp + numbers[k];
-                    } else  (charArray[j] == ' ') {
+                    } else if (charArray[j] == ' ') {
                         if (!temp.equals("") && !temp.equals(" ")) {
                             tempList.add(temp);
                             temp = "";
