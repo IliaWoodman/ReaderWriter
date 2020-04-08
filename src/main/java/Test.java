@@ -86,7 +86,7 @@ public class Test {
         reader = new BufferedReader(new FileReader(in));
         writer = new BufferedWriter(new FileWriter(out));
         while (reader.ready()) {
-            s = reader.readLine().replaceAll("[a-zA-Z]", ""); //читаем строку и убираем из нее все буквы
+            s = reader.readLine().replaceAll("[a-zA-Z]", " ").replaceAll("\\s{2,}", " "); //читаем строку и убираем из нее все буквы
             tmp = s.split(" "); //разбиваем по пробелу и пишем во временный массив
 
             for (String str : tmp) {  //идем по временному массиву и пытаемся превратить значение элемента массива в инт
